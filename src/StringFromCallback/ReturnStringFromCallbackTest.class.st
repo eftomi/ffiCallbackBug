@@ -26,6 +26,12 @@ ReturnStringFromCallbackTest >> ffiLibrary [
 
 { #category : #tests }
 ReturnStringFromCallbackTest >> testCallbackWithInt [
+"Call 
+
+int TestCallbackWithInt(int a, int (*fnint)(int b)) 
+
+which takes a callback function as a second parameter"
+
 	| cb |
 	cb := FFICallback new 
 		signature: #(int (int n))  
@@ -35,6 +41,12 @@ ReturnStringFromCallbackTest >> testCallbackWithInt [
 
 { #category : #tests }
 ReturnStringFromCallbackTest >> testCallbackWithString [
+"Call 
+
+const char *TestCallbackWithString(const char *(*fnstring)(const char* inputToPharoString))
+
+which takes a callback function as a second parameter; function returns a pointer (to a C string)"
+
 	| cb |
 	cb := FFICallback new 
 		signature: #(const char * (const char * s)) 
@@ -44,5 +56,6 @@ ReturnStringFromCallbackTest >> testCallbackWithString [
 
 { #category : #tests }
 ReturnStringFromCallbackTest >> testMultipliedBy10 [
+"Simple ffiCall to check the environment"
 	self assert: (self callMultuplyBy10: 5)  equals: 50.
 ]
