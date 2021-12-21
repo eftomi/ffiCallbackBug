@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  dllmain.cpp
+     Creating library C:\Users\tomaz.turk\EFTOMI\RAZVOJNO DELO\PROJEKTI\Repos\CallbackDLL\x64\Release\Callback.lib and object C:\Users\tomaz.turk\EFTOMI\RAZVOJNO DELO\PROJEKTI\Repos\CallbackDLL\x64\Release\Callback.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  CallbackDLL.vcxproj -> C:\Users\tomaz.turk\EFTOMI\RAZVOJNO DELO\PROJEKTI\Repos\CallbackDLL\x64\Release\Callback.dll
