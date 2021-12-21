@@ -28,7 +28,7 @@ ReturnStringFromCallbackTest >> ffiLibrary [
 ReturnStringFromCallbackTest >> testCallbackWithInt [
 "Call 
 
-int TestCallbackWithInt(int a, int (*fnint)(int b)) 
+int TestCallbackWithInt(int inputFromPharo, int (*callPharoInt)(int inputToPharoInt)) 
 
 which takes a callback function as a second parameter"
 
@@ -43,9 +43,9 @@ which takes a callback function as a second parameter"
 ReturnStringFromCallbackTest >> testCallbackWithString [
 "Call 
 
-const char *TestCallbackWithString(const char *(*fnstring)(const char* inputToPharoString))
+const char * TestCallbackWithString(const char* inputFromPharo, const char* (*callPharoString)(const char* inputToPharoString))
 
-which takes a callback function as a second parameter; function returns a pointer (to a C string)"
+which takes a callback function as a second parameter; function returns a pointer to a C string"
 
 	| cb |
 	cb := FFICallback new 
